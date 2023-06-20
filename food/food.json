@@ -1,0 +1,210 @@
+{
+    "batilisk_wing": {
+        "group": "meat",
+        "value": 0.5
+    },
+    "drumstick": {
+        "group": "meat",
+        "value": 0.5
+    },
+    "frog_legs": {
+        "group": "meat",
+        "value": 0.5
+    },
+    "morsel": {
+        "group": "meat",
+        "value": 0.5
+    },
+    "leafy_meat": {
+        "group": "meat",
+        "value": 0.5
+    },
+    "naked_nostrils": {
+        "group": "meat",
+        "value": 0.5
+    },
+    "meat": {
+        "group": "meat",
+        "value": 1.0
+    },
+    "barnacles": {
+        "group": "fish_meat",
+        "value": 0.25
+    },
+    "eel": {
+        "group": "fish_meat",
+        "value": 0.5
+    },
+    "fish": {
+        "group": "fish_meat",
+        "value": 0.5
+    },
+    "fish_morsel": {
+        "group": "fish_meat",
+        "value": 0.5
+    },
+    "raw_fish": {
+        "group": "fish_meat",
+        "value": 1.0
+    },
+    "dead_wobster": {
+        "group": "fish_meat",
+        "value": 1.0
+    },
+    "fish_meat": {
+        "group": "fish_meat",
+        "value": 1.0
+    },
+    "blue_cap": {
+        "group": "vegetable",
+        "value": 0.5
+    },
+    "green_cap": {
+        "group": "vegetable",
+        "value": 0.5
+    },
+    "red_cap": {
+        "group": "vegetable",
+        "value": 0.5
+    },
+    "cactus_flower": {
+        "group": "vegetable",
+        "value": 0.5
+    },
+    "kelp_fronds": {
+        "group": "vegetable",
+        "value": 0.5
+    },
+    "moon_shroom": {
+        "group": "vegetable",
+        "value": 0.5
+    },
+    "carrot": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "corn": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "eggplant": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "pumpkin": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "mandrake": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "lichen": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "cactus_flesh": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "asparagus": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "ripe_stone_fruit": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "garlic": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "onion": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "pepper": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "potato": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "toma_root": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "popperfish": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "corn_cod": {
+        "group": "vegetable",
+        "value": 1.0
+    },
+    "egg": {
+        "group": "egg",
+        "value": 1.0
+    },
+    "tallbird_egg": {
+        "group": "egg",
+        "value": 3.0
+    },
+    "berries": {
+        "group": "fruit",
+        "value": 0.5
+    },
+    "juicy_berries": {
+        "group": "fruit",
+        "value": 0.5
+    },
+    "fig": {
+        "group": "fruit",
+        "value": 0.5
+    },
+    "cave_banana": {
+        "group": "fruit",
+        "value": 1.0
+    },
+    "dragon_fruit": {
+        "group": "fruit",
+        "value": 1.0
+    },
+    "durian": {
+        "group": "fruit",
+        "value": 1.0
+    },
+    "pomegranate": {
+        "group": "fruit",
+        "value": 1.0
+    },
+    "watermelon": {
+        "group": "fruit",
+        "value": 1.0
+    },
+    "honey": {
+        "group": "sweetener",
+        "value": 1.0
+    },
+    "honeycomb": {
+        "group": "sweetener",
+        "value": 1.0
+    },
+    "royal_jelly": {
+        "group": "sweetener",
+        "value": 3.0
+    },
+    "monster_meat": {
+        "group": "monster_meat",
+        "value": 1.0
+    },
+    "butter": {
+        "group": "dairy",
+        "value": 1.0
+    },
+    "ice": {
+        "group": "other",
+        "value": 1.0
+    }
+}

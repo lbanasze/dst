@@ -18,6 +18,15 @@ def get_html(url, target_element=None, target_class=None):
     return page
 
 
+def parse_images(cell):
+    images = cell.find_all('img', alt=True)
+    image_names = []
+    for image in images:
+        name = image['data-image-key'].lower().replace('.png', '')
+        image_names.append(name)
+
+    return image_names
+
 def scrape_crockpot(accepted_dlc = ['Don\'t Starve Together', 'DST']):
     url = 'https://dontstarve.fandom.com/wiki/Crock_Pot'
     table = get_html(url, target_element='table', target_class='sortable')[0]
@@ -40,20 +49,19 @@ def scrape_crockpot(accepted_dlc = ['Don\'t Starve Together', 'DST']):
             # Since the ingredients are displayed as images, the image name needs to be parsed
             ingredients = []
             ingredients_cell = cells[9]
-
             # TODO: Add logic to automatically determine quantity... this is a bit tricky
-            ingredients_cell_text = re.sub('<[^<]+?>', '', ingredients_cell.text)
-            ingredient_quantity = 0
-
-
-            ingredients_images = ingredients_cell.find_all('img', alt=True)
-            for ingredient_image in ingredients_images:
+            ingredient_image_names = parse_images(ingredients_cell)
+            for ingredient_image_name in ingredient_image_names:
                 ingredient = {
-                    'name': ingredient_image['alt'],
-                    'quantity': ingredient_quantity
+                    'name': ingredient_image_name,
+                    'quantity': 0
                 }
 
                 ingredients.append(ingredient)
+
+            avoid_ingredients = cells[10]
+            avoid_ingredient_image_names = parse_images(avoid_ingredients)
+
 
             recipe = {
                 'recipe_name' : cells[1].get_text().strip(),
@@ -61,20 +69,44 @@ def scrape_crockpot(accepted_dlc = ['Don\'t Starve Together', 'DST']):
                 'sanity' : cells[4].get_text().strip(),
                 'health' : cells[5].get_text().strip(),
                 'expiration' : cells[6].get_text().strip(),
-                'ingredients': ingredients
+                'priority': cells[8
+                                  ].get_text().strip(),
+                'no': avoid_ingredient_image_names
             }
+
+            for ingredient_image_name in ingredient_image_names:
+                # Skip images that aren't actually
+                if ingredient_image_name in ['Don\'t_Starve_Together_icon']:
+                    continue
+
+                recipe[ingredient_image_name] = 1
 
             recipes.append(recipe)
 
     return recipes
+
         
     
 def main():
-    recipes = scrape_crockpot()
+    recipes = json.load(open('crockpot_recipes.json'))
     
-    with open('crockpot_recipes.json', 'w') as outfile:
-        recipes_json = json.dumps(recipes)
-        outfile.write(recipes_json)
+    columns = ["recipe_name", "hunger", "sanity", "health","expiration", "priority", "no" ]
+
+    new_recipes = []
+    for recipe in recipes:
+        new_recipe = {}
+        ingredients = {}
+        for key, value in recipe.items():
+            if key not in columns:
+                ingredients[key] = value
+            else: 
+                new_recipe[key] = value
+        
+        new_recipe['ingredients'] = ingredients
+
+        new_recipes.append(new_recipe)
+
+    print(new_recipes)
 
 
 main()
