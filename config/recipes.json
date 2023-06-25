@@ -1,6 +1,6 @@
 [
     {
-        "recipe_name": "Bacon and Eggs",
+        "name": "Bacon and Eggs",
         "hunger": 75.0,
         "sanity": 5.0,
         "health": 20.0,
@@ -9,13 +9,14 @@
         "no": [
             "vegetable"
         ],
-        "ingredients": {
-            "meat": 1,
-            "egg": 1
-        }
+        "food_group_ingredients": {
+            "MEAT": 1,
+            "EGG": 1
+        },
+        "special_ingredients": {}
     },
     {
-        "recipe_name": "Banana Shake",
+        "name": "Banana Shake",
         "hunger": 25.0,
         "sanity": 33.0,
         "health": 8.0,
@@ -26,79 +27,89 @@
             "fish_meat",
             "monster"
         ],
-        "ingredients": {
-            "cave_banana": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "CAVE_BANANA": 1
         }
     },
     {
-        "recipe_name": "Barnacle Linguine",
+        "name": "Barnacle Linguine",
         "hunger": 75.0,
         "sanity": 20.0,
         "health": 10.0,
         "expiration": "6d",
         "priority": 30.0,
         "no": [],
-        "ingredients": {
-            "barnacles": 1,
-            "vegetable": 1
+        "food_group_ingredients": {
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {
+            "BARNACLES": 1
         }
     },
     {
-        "recipe_name": "Barnacle Nigiri",
+        "name": "Barnacle Nigiri",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 40.0,
         "expiration": "10d",
         "priority": 30.0,
         "no": [],
-        "ingredients": {
-            "barnacles": 1,
-            "kelp_fronds": 1,
-            "egg": 1
+        "food_group_ingredients": {
+            "EGG": 1
+        },
+        "special_ingredients": {
+            "BARNACLES": 1,
+            "KELP_FRONDS": 1
         }
     },
     {
-        "recipe_name": "Barnacle Pita",
+        "name": "Barnacle Pita",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 20.0,
         "expiration": "15d",
         "priority": 25.0,
         "no": [],
-        "ingredients": {
-            "barnacles": 1,
-            "vegetable": 1
+        "food_group_ingredients": {
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {
+            "BARNACLES": 1
         }
     },
     {
-        "recipe_name": "Beefalo Treats",
+        "name": "Beefalo Treats",
         "hunger": 0,
         "sanity": 0,
         "health": 0,
         "expiration": "10d",
         "priority": -4.0,
         "no": [],
-        "ingredients": {
-            "birchnut": 1,
-            "twigs": 1,
-            "forget-me-lots": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "BIRCHNUT": 1,
+            "TWIGS": 1,
+            "FORGET-ME-LOTS": 1
         }
     },
     {
-        "recipe_name": "Beefy Greens",
+        "name": "Beefy Greens",
         "hunger": 75.0,
         "sanity": 5.0,
         "health": 40.0,
         "expiration": "6d",
         "priority": 25.0,
         "no": [],
-        "ingredients": {
-            "leafy_meat": 1,
-            "vegetable": 1
+        "food_group_ingredients": {
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {
+            "LEAFY_MEAT": 1
         }
     },
     {
-        "recipe_name": "Breakfast Skillet",
+        "name": "Breakfast Skillet",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 20.0,
@@ -108,13 +119,14 @@
             "meat",
             "dairy"
         ],
-        "ingredients": {
-            "egg": 1,
-            "vegetable": 1
-        }
+        "food_group_ingredients": {
+            "EGG": 1,
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {}
     },
     {
-        "recipe_name": "Bunny Stew",
+        "name": "Bunny Stew",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 20.0,
@@ -124,13 +136,15 @@
             "inedible",
             "meat"
         ],
-        "ingredients": {
-            "meat": 1,
-            "ice": 1
+        "food_group_ingredients": {
+            "MEAT": 1
+        },
+        "special_ingredients": {
+            "ICE": 1
         }
     },
     {
-        "recipe_name": "Butter Muffin",
+        "name": "Butter Muffin",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 20.0,
@@ -141,27 +155,30 @@
             "butterfly_wings",
             "moon_moth_wings"
         ],
-        "ingredients": {
-            "butterfly_wings": 1,
-            "vegetable": 1
+        "food_group_ingredients": {
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {
+            "BUTTERFLY_WINGS": 1
         }
     },
     {
-        "recipe_name": "Collected Dust",
+        "name": "Collected Dust",
         "hunger": 0,
         "sanity": 0,
         "health": 0,
         "expiration": "Never",
         "priority": 0,
         "no": [],
-        "ingredients": {
-            "salt_crystals": 1,
-            "rocks": 1,
-            "nitre": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "SALT_CRYSTALS": 1,
+            "ROCKS": 1,
+            "NITRE": 1
         }
     },
     {
-        "recipe_name": "Creamy Potato PurÃ©e",
+        "name": "Creamy Potato PurÃƒÂ©e",
         "hunger": 37.5,
         "sanity": 33.0,
         "health": 20.0,
@@ -171,13 +188,14 @@
             "meat",
             "inedible"
         ],
-        "ingredients": {
-            "potato": 1,
-            "garlic": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "POTATO": 1,
+            "GARLIC": 1
         }
     },
     {
-        "recipe_name": "Dragonpie",
+        "name": "Dragonpie",
         "hunger": 75.0,
         "sanity": 5.0,
         "health": 40.0,
@@ -186,12 +204,13 @@
         "no": [
             "meat"
         ],
-        "ingredients": {
-            "dragon_fruit": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "DRAGON_FRUIT": 1
         }
     },
     {
-        "recipe_name": "Fancy Spiralled Tubers",
+        "name": "Fancy Spiralled Tubers",
         "hunger": 37.5,
         "sanity": 15.0,
         "health": 3.0,
@@ -202,13 +221,14 @@
             "monster",
             "inedible"
         ],
-        "ingredients": {
-            "potato": 1,
-            "twigs": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "POTATO": 1,
+            "TWIGS": 1
         }
     },
     {
-        "recipe_name": "Figatoni",
+        "name": "Figatoni",
         "hunger": 56.25,
         "sanity": 15.0,
         "health": 30.0,
@@ -217,66 +237,74 @@
         "no": [
             "meat"
         ],
-        "ingredients": {
-            "fig": 1,
-            "vegetable": 1
+        "food_group_ingredients": {
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {
+            "FIG": 1
         }
     },
     {
-        "recipe_name": "Figgy Frogwich",
+        "name": "Figgy Frogwich",
         "hunger": 18.75,
         "sanity": 10.0,
         "health": 8.0,
         "expiration": "15d",
         "priority": 1.0,
         "no": [],
-        "ingredients": {
-            "fig": 1,
-            "frog_legs": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "FIG": 1,
+            "FROG_LEGS": 1
         }
     },
     {
-        "recipe_name": "Figkabab",
+        "name": "Figkabab",
         "hunger": 25.0,
         "sanity": 15.0,
         "health": 20.0,
         "expiration": "15d",
         "priority": 30.0,
         "no": [],
-        "ingredients": {
-            "fig": 1,
-            "meat": 1,
-            "twigs": 1
+        "food_group_ingredients": {
+            "MEAT": 1
+        },
+        "special_ingredients": {
+            "FIG": 1,
+            "TWIGS": 1
         }
     },
     {
-        "recipe_name": "Fig-Stuffed Trunk",
+        "name": "Fig-Stuffed Trunk",
         "hunger": 56.25,
         "sanity": 0.0,
         "health": 60.0,
         "expiration": "10d",
         "priority": 40.0,
         "no": [],
-        "ingredients": {
-            "fig": 1,
-            "koalefant_trunks": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "FIG": 1,
+            "KOALEFANT_TRUNKS": 1
         }
     },
     {
-        "recipe_name": "Fish Tacos",
+        "name": "Fish Tacos",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 20.0,
         "expiration": "6d",
         "priority": 10.0,
         "no": [],
-        "ingredients": {
-            "corns": 1,
-            "fish_meat": 1
+        "food_group_ingredients": {
+            "FISH_MEAT": 1
+        },
+        "special_ingredients": {
+            "CORNS": 1
         }
     },
     {
-        "recipe_name": "Fishsticks",
+        "name": "Fishsticks",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 40.0,
@@ -285,13 +313,15 @@
         "no": [
             "inedible"
         ],
-        "ingredients": {
-            "fish_meat": 1,
-            "twigs": 1
+        "food_group_ingredients": {
+            "FISH_MEAT": 1
+        },
+        "special_ingredients": {
+            "TWIGS": 1
         }
     },
     {
-        "recipe_name": "Fist Full of Jam",
+        "name": "Fist Full of Jam",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 3.0,
@@ -302,25 +332,28 @@
             "vegetable",
             "inedible"
         ],
-        "ingredients": {
-            "fruit": 1
-        }
+        "food_group_ingredients": {
+            "FRUIT": 1
+        },
+        "special_ingredients": {}
     },
     {
-        "recipe_name": "Froggle Bunwich",
+        "name": "Froggle Bunwich",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 20.0,
         "expiration": "15d",
         "priority": 1.0,
         "no": [],
-        "ingredients": {
-            "frog_legs": 1,
-            "vegetable": 1
+        "food_group_ingredients": {
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {
+            "FROG_LEGS": 1
         }
     },
     {
-        "recipe_name": "Frozen Banana Daiquiri",
+        "name": "Frozen Banana Daiquiri",
         "hunger": 18.75,
         "sanity": 15.0,
         "health": 30.0,
@@ -329,13 +362,14 @@
         "no": [
             "twigs"
         ],
-        "ingredients": {
-            "cave_banana": 1,
-            "ice": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "CAVE_BANANA": 1,
+            "ICE": 1
         }
     },
     {
-        "recipe_name": "Fruit Medley",
+        "name": "Fruit Medley",
         "hunger": 25.0,
         "sanity": 5.0,
         "health": 20.0,
@@ -345,12 +379,13 @@
             "meat",
             "vegetable"
         ],
-        "ingredients": {
-            "fruit": 1
-        }
+        "food_group_ingredients": {
+            "FRUIT": 1
+        },
+        "special_ingredients": {}
     },
     {
-        "recipe_name": "Honey Ham",
+        "name": "Honey Ham",
         "hunger": 75.0,
         "sanity": 5.0,
         "health": 30.0,
@@ -360,13 +395,15 @@
             "inedible",
             "monster"
         ],
-        "ingredients": {
-            "honey": 1,
-            "meat": 1
+        "food_group_ingredients": {
+            "MEAT": 1
+        },
+        "special_ingredients": {
+            "HONEY": 1
         }
     },
     {
-        "recipe_name": "Honey Nuggets",
+        "name": "Honey Nuggets",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 20.0,
@@ -376,13 +413,15 @@
             "inedible",
             "meat"
         ],
-        "ingredients": {
-            "honey": 1,
-            "meat": 1
+        "food_group_ingredients": {
+            "MEAT": 1
+        },
+        "special_ingredients": {
+            "HONEY": 1
         }
     },
     {
-        "recipe_name": "Jellybeans",
+        "name": "Jellybeans",
         "hunger": 0.0,
         "sanity": 5.0,
         "health": 122.0,
@@ -392,25 +431,28 @@
             "inedible",
             "monster"
         ],
-        "ingredients": {
-            "royal_jelly": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "ROYAL_JELLY": 1
         }
     },
     {
-        "recipe_name": "Jelly Salad",
+        "name": "Jelly Salad",
         "hunger": 37.5,
         "sanity": 50.0,
         "health": 0.0,
         "expiration": "6d",
         "priority": 50.0,
         "no": [],
-        "ingredients": {
-            "leafy_meat": 1,
-            "sweetener": 1
+        "food_group_ingredients": {
+            "SWEETENER": 1
+        },
+        "special_ingredients": {
+            "LEAFY_MEAT": 1
         }
     },
     {
-        "recipe_name": "Kabobs",
+        "name": "Kabobs",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 3.0,
@@ -420,25 +462,28 @@
             "inedible",
             "monster"
         ],
-        "ingredients": {
-            "meat": 1,
-            "twigs": 1
+        "food_group_ingredients": {
+            "MEAT": 1
+        },
+        "special_ingredients": {
+            "TWIGS": 1
         }
     },
     {
-        "recipe_name": "Mandrake Soup",
+        "name": "Mandrake Soup",
         "hunger": 150.0,
         "sanity": 5.0,
         "health": 100.0,
         "expiration": "6d",
         "priority": 10.0,
         "no": [],
-        "ingredients": {
-            "mandrake": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "MANDRAKE": 1
         }
     },
     {
-        "recipe_name": "Meatballs",
+        "name": "Meatballs",
         "hunger": 62.5,
         "sanity": 5.0,
         "health": 3.0,
@@ -447,12 +492,13 @@
         "no": [
             "inedible"
         ],
-        "ingredients": {
-            "meat": 1
-        }
+        "food_group_ingredients": {
+            "MEAT": 1
+        },
+        "special_ingredients": {}
     },
     {
-        "recipe_name": "Meaty Stew",
+        "name": "Meaty Stew",
         "hunger": 150.0,
         "sanity": 5.0,
         "health": 12.0,
@@ -463,26 +509,29 @@
             "tallbird_egg",
             "mandrake"
         ],
-        "ingredients": {
-            "meat": 1
-        }
+        "food_group_ingredients": {
+            "MEAT": 1
+        },
+        "special_ingredients": {}
     },
     {
-        "recipe_name": "Milkmade Hat",
+        "name": "Milkmade Hat",
         "hunger": 187.5,
         "sanity": -5.3,
         "health": 0.0,
         "expiration": "Never",
         "priority": 55.0,
         "no": [],
-        "ingredients": {
-            "naked_nostrils": 1,
-            "kelp_fronds": 1,
-            "dairy": 1
+        "food_group_ingredients": {
+            "DAIRY": 1
+        },
+        "special_ingredients": {
+            "NAKED_NOSTRILS": 1,
+            "KELP_FRONDS": 1
         }
     },
     {
-        "recipe_name": "Monster Lasagna",
+        "name": "Monster Lasagna",
         "hunger": 37.5,
         "sanity": -20.0,
         "health": -20.0,
@@ -491,39 +540,42 @@
         "no": [
             "inedible"
         ],
-        "ingredients": {
-            "monster": 1
-        }
+        "food_group_ingredients": {
+            "MONSTER": 1
+        },
+        "special_ingredients": {}
     },
     {
-        "recipe_name": "Mushy Cake",
+        "name": "Mushy Cake",
         "hunger": 25.0,
         "sanity": 10.0,
         "health": 0.0,
         "expiration": "15d",
         "priority": 30.0,
         "no": [],
-        "ingredients": {
-            "moon_shroom": 1,
-            "red_cap": 1,
-            "blue_cap": 1,
-            "green_cap": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "MOON_SHROOM": 1,
+            "RED_CAP": 1,
+            "BLUE_CAP": 1,
+            "GREEN_CAP": 1
         }
     },
     {
-        "recipe_name": "Leafy Meatloaf",
+        "name": "Leafy Meatloaf",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 8.0,
         "expiration": "20d",
         "priority": 25.0,
         "no": [],
-        "ingredients": {
-            "leafy_meat": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "LEAFY_MEAT": 1
         }
     },
     {
-        "recipe_name": "Pierogi",
+        "name": "Pierogi",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 40.0,
@@ -532,54 +584,59 @@
         "no": [
             "inedible"
         ],
-        "ingredients": {
-            "egg": 1,
-            "meat": 1,
-            "vegetable": 1
-        }
+        "food_group_ingredients": {
+            "EGG": 1,
+            "MEAT": 1,
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {}
     },
     {
-        "recipe_name": "Plain Omelette",
+        "name": "Plain Omelette",
         "hunger": 50.0,
         "sanity": 5.0,
         "health": 3.0,
         "expiration": "20d",
         "priority": 1.0,
         "no": [],
-        "ingredients": {
-            "egg": 1
-        }
+        "food_group_ingredients": {
+            "EGG": 1
+        },
+        "special_ingredients": {}
     },
     {
-        "recipe_name": "Powdercake",
+        "name": "Powdercake",
         "hunger": 0.0,
         "sanity": 0.0,
         "health": -3.0,
         "expiration": "18750d",
         "priority": 10.0,
         "no": [],
-        "ingredients": {
-            "corns": 1,
-            "popperfish": 1,
-            "honey": 1,
-            "twigs": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "CORNS": 1,
+            "POPPERFISH": 1,
+            "HONEY": 1,
+            "TWIGS": 1
         }
     },
     {
-        "recipe_name": "Pumpkin Cookie",
+        "name": "Pumpkin Cookie",
         "hunger": 37.5,
         "sanity": 15.0,
         "health": 0.0,
         "expiration": "10d",
         "priority": 10.0,
         "no": [],
-        "ingredients": {
-            "pumpkin": 1,
-            "sweetener": 1
+        "food_group_ingredients": {
+            "SWEETENER": 1
+        },
+        "special_ingredients": {
+            "PUMPKIN": 1
         }
     },
     {
-        "recipe_name": "Ratatouille",
+        "name": "Ratatouille",
         "hunger": 25.0,
         "sanity": 5.0,
         "health": 3.0,
@@ -589,12 +646,13 @@
             "meat",
             "inedible"
         ],
-        "ingredients": {
-            "vegetable": 1
-        }
+        "food_group_ingredients": {
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {}
     },
     {
-        "recipe_name": "Salsa Fresca",
+        "name": "Salsa Fresca",
         "hunger": 25.0,
         "sanity": 33.0,
         "health": 3.0,
@@ -605,26 +663,29 @@
             "inedible",
             "egg"
         ],
-        "ingredients": {
-            "toma_roots": 1,
-            "onion": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "TOMA_ROOTS": 1,
+            "ONION": 1
         }
     },
     {
-        "recipe_name": "Seafood Gumbo",
+        "name": "Seafood Gumbo",
         "hunger": 37.5,
         "sanity": 20.0,
         "health": 40.0,
         "expiration": "10d",
         "priority": 10.0,
         "no": [],
-        "ingredients": {
-            "eels": 1,
-            "fish_meat": 1
+        "food_group_ingredients": {
+            "FISH_MEAT": 1
+        },
+        "special_ingredients": {
+            "EELS": 1
         }
     },
     {
-        "recipe_name": "Soothing Tea",
+        "name": "Soothing Tea",
         "hunger": 0.0,
         "sanity": 45.0,
         "health": 3.0,
@@ -639,14 +700,16 @@
             "dairy",
             "egg"
         ],
-        "ingredients": {
-            "forget-me-lots": 1,
-            "sweetener": 1,
-            "ice": 1
+        "food_group_ingredients": {
+            "SWEETENER": 1
+        },
+        "special_ingredients": {
+            "FORGET-ME-LOTS": 1,
+            "ICE": 1
         }
     },
     {
-        "recipe_name": "Steamed Twigs",
+        "name": "Steamed Twigs",
         "hunger": 0,
         "sanity": 0,
         "health": 0,
@@ -658,38 +721,43 @@
             "dairy",
             "nightmare_fuel"
         ],
-        "ingredients": {
-            "twigs": 1
+        "food_group_ingredients": {},
+        "special_ingredients": {
+            "TWIGS": 1
         }
     },
     {
-        "recipe_name": "Stuffed Eggplant",
+        "name": "Stuffed Eggplant",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 3.0,
         "expiration": "15d",
         "priority": 1.0,
         "no": [],
-        "ingredients": {
-            "eggplants": 1,
-            "vegetable": 1
+        "food_group_ingredients": {
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {
+            "EGGPLANTS": 1
         }
     },
     {
-        "recipe_name": "Stuffed Fish Heads",
+        "name": "Stuffed Fish Heads",
         "hunger": 75.0,
         "sanity": 0.0,
         "health": 20.0,
         "expiration": "3d",
         "priority": 25.0,
         "no": [],
-        "ingredients": {
-            "barnacles": 1,
-            "fish_meat": 1
+        "food_group_ingredients": {
+            "FISH_MEAT": 1
+        },
+        "special_ingredients": {
+            "BARNACLES": 1
         }
     },
     {
-        "recipe_name": "Stuffed Pepper Poppers",
+        "name": "Stuffed Pepper Poppers",
         "hunger": 25.0,
         "sanity": -5.0,
         "health": 30.0,
@@ -699,115 +767,47 @@
             "inedible",
             "meat"
         ],
-        "ingredients": {
-            "peppers": 1,
-            "meat": 1
+        "food_group_ingredients": {
+            "MEAT": 1
+        },
+        "special_ingredients": {
+            "PEPPERS": 1
         }
     },
     {
-        "recipe_name": "Taffy",
+        "name": "Taffy",
         "hunger": 25.0,
         "sanity": 15.0,
         "health": -3.0,
-        "expiration": "15d",
-        "priority": 10.0,
-        "no": [
-            "meat"
-        ],
-        "ingredients": {
-            "sweetener": 1
-        }
-    },
-    {
-        "recipe_name": "Tall Scotch Eggs",
-        "hunger": 150.0,
-        "sanity": 5.0,
-        "health": 60.0,
-        "expiration": "15d",
-        "priority": 10.0,
-        "no": [],
-        "ingredients": {
-            "tallbird_egg": 1,
-            "vegetable": 1
-        }
-    },
-    {
-        "recipe_name": "Turkey Dinner",
-        "hunger": 75.0,
-        "sanity": 5.0,
-        "health": 20.0,
-        "expiration": "6d",
-        "priority": 10.0,
-        "no": [
-            "barnacles"
-        ],
-        "ingredients": {
-            "drumstick": 1,
-            "meat": 1,
-            "vegetable": 1,
-            "fruit": 1
-        }
-    },
-    {
-        "recipe_name": "Unagi",
-        "hunger": 18.75,
-        "sanity": 5.0,
-        "health": 20.0,
-        "expiration": "10d",
-        "priority": 20.0,
-        "no": [],
-        "ingredients": {
-            "eels": 1,
-            "lichen": 1,
-            "kelp_fronds": 1,
-            "don%27t_starve_together_icon": 1
-        }
-    },
-    {
-        "recipe_name": "Veggie Burger",
-        "hunger": 37.5,
-        "sanity": 33.0,
-        "health": 30.0,
-        "expiration": "6d",
-        "priority": 25.0,
-        "no": [],
-        "ingredients": {
-            "leafy_meat": 1,
-            "onion": 1,
-            "vegetable": 1
-        }
-    },
-    {
-        "recipe_name": "Vegetable Stinger",
-        "hunger": 25.0,
-        "sanity": 33.0,
-        "health": 3.0,
-        "expiration": "15d",
-        "priority": 15.0,
+        "expiration": 15.0,
         "no": [
             "meat",
             "egg",
             "inedible"
         ],
-        "ingredients": {
-            "asparaguses": 1,
-            "toma_roots": 1,
-            "ice": 1,
-            "vegetable": 1
+        "food_group_ingredients": {
+            "VEGETABLE": 1
+        },
+        "special_ingredients": {
+            "ASPARAGUSES": 1,
+            "TOMA_ROOTS": 1,
+            "ICE": 1
         }
     },
     {
-        "recipe_name": "Waffles",
+        "name": "Waffles",
         "hunger": 37.5,
         "sanity": 5.0,
         "health": 60.0,
         "expiration": "6d",
         "priority": 10.0,
         "no": [],
-        "ingredients": {
-            "butter": 1,
-            "berries": 1,
-            "egg": 1
+        "food_group_ingredients": {
+            "EGG": 1
+        },
+        "special_ingredients": {
+            "BUTTER": 1,
+            "BERRIES": 1
         }
     }
 ]

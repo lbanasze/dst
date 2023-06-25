@@ -1,6 +1,5 @@
 from enum import Enum
-import json
-import pandas
+
 
 Group = Enum('Group', ['MEAT', 'FISH_MEAT', 'EGG', 'FRUIT', 'VEGETABLE', 'SWEETENER', 'MONSTER', 'DAIRY', 'OTHER'])
 class Food:
@@ -40,21 +39,3 @@ def tally_food(food_list: list[Food]):
         group_tally[food.get_group().upper()] = group_tally[food.get_group().upper()] + food.get_value()
 
     return group_tally
-
-def names_to_objects(names: list, food_data: dict):
-    foods = []
-    for name in names:
-        new_food = Food(name, food_data[name]['group'], food_data[name]['value'])
-        foods.append(new_food)
-
-    return foods
-
-def main():
-    food_data = json.load(open('food.json'))
-    food_names = ['drumstick', 'drumstick', 'toma_root', 'pumpkin']
-    food_list = names_to_objects(food_names, food_data)
-    
-    tally = tally_food(food_list)
-    print(tally)
-
-main()
