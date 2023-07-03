@@ -22,7 +22,27 @@ class Food:
         return f'{self.name}, {self.group}, {self.value}'
 
 
-def tally_food(food_list: list[Food]):
+def get_quantity(food_list: list[Food], special_ingredient):
+    quantity = 0
+    for food in food_list:
+        if food.get_name() == special_ingredient:
+            quantity += food.get_value()
+
+    return quantity
+
+def remove_by_quantity(food_list: list[Food], special_ingredient, quantity):
+    new_food_list = []
+    while quantity != 0:
+        for food in food_list:
+            if food.get_name() == special_ingredient:
+                quantity -= food.get_value()
+            else:
+                new_food_list.append(food)
+
+    return new_food_list
+                
+
+def tally_basic(food_list: list[Food]):
     group_tally = {
         'MEAT': 0,
         'FISH_MEAT': 0, 

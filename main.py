@@ -1,5 +1,5 @@
-from recipes.recipes import Recipe
-from food.food import tally_food, Food
+from food.food import get_quantity, remove_by_quantity, tally_basic, Food
+import copy
 import json
 import os
 
@@ -23,14 +23,49 @@ def names_to_objects(names: list, food_data: dict):
     return foods
 
 
+# Brute force method to check recipes
+def check_recipes(recipes: list, foods: list[Food]):
+    viable_recipes = []
+    for recipe in recipes:
+        # Check for special ingredients
+        special_ingredients = copy.deepcopy(recipe['special_ingredients'])
+        for ingredient, quantity in recipe['special_ingredients'].items():
+            if get_quantity(foods, ingredient) >= quantity:
+                foods = remove_by_quantity(foods, ingredient, quantity)
+                special_ingredients.pop(ingredient)
+
+        if len(special_ingredients) != 0:
+            continue
+
+        # Check for general ingredients
+        basic_foods = tally_basic(foods)
+        basic_ingredients = copy.deepcopy(recipe['food_group_ingredients'])
+        for ingredient, quantity in recipe['food_group_ingredients'].items():
+            if basic_foods[ingredient] >= quantity:
+                basic_ingredients.pop(ingredient)
+
+        if len(basic_ingredients) != 0:
+            continue
+
+
+        viable_recipes.append(recipe)
+
+    return viable_recipes
+        
+
 def main():
     config = setup_config()
 
-    food_names = ['drumstick', 'drumstick', 'toma_root', 'pumpkin']
+    food_names = ['meat', 'meat', 'meat']
     food_list = names_to_objects(food_names, config['food'])
-    
-    tally = tally_food(food_list)
 
-    print(tally)
+    recipes = config['recipes']
+
+    viable_recipes = check_recipes(recipes, food_list)
+
+    for viable_recipe in viable_recipes:
+        print(viable_recipe['name'])
+
+    
 
 main()
