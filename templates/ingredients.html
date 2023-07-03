@@ -1,101 +1,220 @@
 <!DOCTYPE html>
 <html>
 
-<body>
-    <head>
+<head>
         <style>
-            div {display: inline-block;}
-        </style>
-    </head>
-    <form>
-        <div><label for="collected_dust">Collected Dust:</label><input type="number" id="collected_dust"
-                name="collected_dust" min="1" max="5"></div><br>
-        <div><label for="meats">Meats:</label><input type="number" id="meats" name="meats" min="1" max="5"></div><br>
-        <div><label for="eggs">Eggs:</label><input type="number" id="eggs" name="eggs" min="1" max="5"></div><br>
-        <div><label for="cave_bananas">Cave Bananas:</label><input type="number" id="cave_bananas" name="cave_bananas"
-                min="1" max="5"></div><br>
-        <div><label for="barnacle">Barnacle:</label><input type="number" id="barnacle" name="barnacle" min="1" max="5">
-        </div><br>
-        <div><label for="vegetables">Vegetables:</label><input type="number" id="vegetables" name="vegetables" min="1"
-                max="5"></div><br>
-        <div><label for="kelp_frond">Kelp Frond:</label><input type="number" id="kelp_frond" name="kelp_frond" min="1"
-                max="5"></div><br>
-        <div><label for="birchnut">Birchnut:</label><input type="number" id="birchnut" name="birchnut" min="1" max="5">
-        </div><br>
-        <div><label for="twigs">Twigs:</label><input type="number" id="twigs" name="twigs" min="1" max="5"></div><br>
-        <div><label for="forget-me-lots">Forget-Me-Lots:</label><input type="number" id="forget-me-lots"
-                name="forget-me-lots" min="1" max="5"></div><br>
-        <div><label for="leafy_meats">Leafy Meats:</label><input type="number" id="leafy_meats" name="leafy_meats"
-                min="1" max="5"></div><br>
-        <div><label for="ice">Ice:</label><input type="number" id="ice" name="ice" min="1" max="5"></div><br>
-        <div><label for="butterfly_wings">Butterfly Wings:</label><input type="number" id="butterfly_wings"
-                name="butterfly_wings" min="1" max="5"></div><br>
-        <div><label for="salt_crystals">Salt Crystals:</label><input type="number" id="salt_crystals"
-                name="salt_crystals" min="1" max="5"></div><br>
-        <div><label for="rocks">Rocks:</label><input type="number" id="rocks" name="rocks" min="1" max="5"></div><br>
-        <div><label for="nitre">Nitre:</label><input type="number" id="nitre" name="nitre" min="1" max="5"></div><br>
-        <div><label for="potatoes">Potatoes:</label><input type="number" id="potatoes" name="potatoes" min="1" max="5">
-        </div><br>
-        <div><label for="garlics">Garlics:</label><input type="number" id="garlics" name="garlics" min="1" max="5">
-        </div><br>
-        <div><label for="dragon_fruit">Dragon Fruit:</label><input type="number" id="dragon_fruit" name="dragon_fruit"
-                min="1" max="5"></div><br>
-        <div><label for="figs">Figs:</label><input type="number" id="figs" name="figs" min="1" max="5"></div><br>
-        <div><label for="frog_leg">Frog Leg:</label><input type="number" id="frog_leg" name="frog_leg" min="1" max="5">
-        </div><br>
-        <div><label for="koalefant_trunks">Koalefant Trunks:</label><input type="number" id="koalefant_trunks"
-                name="koalefant_trunks" min="1" max="5"></div><br>
-        <div><label for="corns">Corns:</label><input type="number" id="corns" name="corns" min="1" max="5"></div><br>
-        <div><label for="fishes">Fishes:</label><input type="number" id="fishes" name="fishes" min="1" max="5"></div><br>
-        <div><label for="fruits">Fruits:</label><input type="number" id="fruits" name="fruits" min="1" max="5"></div><br>
-        <div><label for="frog_legs">Frog Legs:</label><input type="number" id="frog_legs" name="frog_legs" min="1"
-                max="5"></div><br>
-        <div><label for="honey">Honey:</label><input type="number" id="honey" name="honey" min="1" max="5"></div><br>
-        <div><label for="royal_jelly">Royal Jelly:</label><input type="number" id="royal_jelly" name="royal_jelly"
-                min="1" max="5"></div><br>
-        <div><label for="sweetener">Sweetener:</label><input type="number" id="sweetener" name="sweetener" min="1"
-                max="5"></div><br>
-        <div><label for="mandrake">Mandrake:</label><input type="number" id="mandrake" name="mandrake" min="1" max="5">
-        </div><br>
-        <div><label for="naked_nostrils">Naked Nostrils:</label><input type="number" id="naked_nostrils"
-                name="naked_nostrils" min="1" max="5"></div><br>
-        <div><label for="kelp_fronds">Kelp Fronds:</label><input type="number" id="kelp_fronds" name="kelp_fronds"
-                min="1" max="5"></div><br>
-        <div><label for="dairy">Dairy:</label><input type="number" id="dairy" name="dairy" min="1" max="5"></div><br>
-        <div><label for="monster_foods">Monster Foods:</label><input type="number" id="monster_foods"
-                name="monster_foods" min="1" max="5"></div><br>
-        <div><label for="moon_shroom">Moon Shroom:</label><input type="number" id="moon_shroom" name="moon_shroom"
-                min="1" max="5"></div><br>
-        <div><label for="red_cap">Red Cap:</label><input type="number" id="red_cap" name="red_cap" min="1" max="5">
-        </div><br>
-        <div><label for="blue_cap">Blue Cap:</label><input type="number" id="blue_cap" name="blue_cap" min="1" max="5">
-        </div><br>
-        <div><label for="green_cap">Green Cap:</label><input type="number" id="green_cap" name="green_cap" min="1"
-                max="5"></div><br>
-        <div><label for="popperfish">Popperfish:</label><input type="number" id="popperfish" name="popperfish" min="1"
-                max="5"></div><br>
-        <div><label for="pumpkin">Pumpkin:</label><input type="number" id="pumpkin" name="pumpkin" min="1" max="5">
-        </div><br>
-        <div><label for="toma_roots">Toma Roots:</label><input type="number" id="toma_roots" name="toma_roots" min="1"
-                max="5"></div><br>
-        <div><label for="onions">Onions:</label><input type="number" id="onions" name="onions" min="1" max="5"></div><br>
-        <div><label for="eels">Eels:</label><input type="number" id="eels" name="eels" min="1" max="5"></div><br>
-        <div><label for="eggplant">Eggplant:</label><input type="number" id="eggplant" name="eggplant" min="1" max="5">
-        </div><br>
-        <div><label for="peppers">Peppers:</label><input type="number" id="peppers" name="peppers" min="1" max="5">
-        </div><br>
-        <div><label for="tallbird_egg">Tallbird Egg:</label><input type="number" id="tallbird_egg" name="tallbird_egg"
-                min="1" max="5"></div><br>
-        <div><label for="drumstick">Drumstick:</label><input type="number" id="drumstick" name="drumstick" min="1"
-                max="5"></div><br>
-        <div><label for="eel">Eel:</label><input type="number" id="eel" name="eel" min="1" max="5"></div><br>
-        <div><label for="lichen">Lichen:</label><input type="number" id="lichen" name="lichen" min="1" max="5"></div><br>
-        <div><label for="asparaguses">Asparaguses:</label><input type="number" id="asparaguses" name="asparaguses"
-                min="1" max="5"></div><br>
-        <div><label for="butter">Butter:</label><input type="number" id="butter" name="butter" min="1" max="5"></div><br>
-        <div><label for="berries">Berries:</label><input type="number" id="berries" name="berries" min="1" max="5">
-        </div><br>
-    </form>
-</body>
+                div {
+                        display: inline-block;
+                }
 
+                .left {
+                        grid-area: left;
+                }
+
+                .right {
+                        grid-area: right;
+                }
+
+                .grid-container {
+                        display: grid;
+                        grid-template-areas:
+                                'left right';
+                        gap: 10px;
+                }
+
+                table {
+                  border-collapse: collapse;
+                  width: 80%;
+                }
+
+                td, th {
+                  border: 1px solid #ddd;
+                  padding: 8px;
+                }
+
+                tr:nth-child(even){background-color: #f2f2f2;}
+
+                tr:hover {background-color: #ddd;}
+
+               	th {
+                  padding-top: 12px;
+                  padding-bottom: 12px;
+                  text-align: left;
+                  background-color: #04AA6D;
+                  color: white;
+                }
+
+        </style>
+</head>
+
+<body class="grid-container">
+        <div class="left">
+                <form action="{{ url_for('gather_ingredients') }}" method="post">
+
+                        <section>
+                                <h2>Vegetables</h2>
+
+                                <div><label for="asparagus">Asparagus:</label><input type="number" id="asparagus"
+                                                name="asparagus" min="1" max="5"></div><br>
+
+                                <div><label for="eggplant">Eggplant:</label><input type="number" id="eggplant"
+                                                name="eggplant" min="1" max="5">
+                                </div><br>
+
+                                <div><label for="pepper">Pepper:</label><input type="number" id="pepper" name="pepper"
+                                                min="1" max="5">
+                                </div><br>
+
+                                <div><label for="corn">Corn:</label><input type="number" id="corn" name="corn" min="1"
+                                                max="5"></div><br>
+
+                                <div><label for="dragon_fruit">Dragon Fruit:</label><input type="number"
+                                                id="dragon_fruit" name="dragon_fruit" min="1" max="5"></div><br>
+
+                                <div><label for="fig">Fig:</label><input type="number" id="fig" name="fig" min="1"
+                                                max="5"></div><br>
+
+                                <div><label for="garlic">Garlic:</label><input type="number" id="garlic" name="garlic"
+                                                min="1" max="5">
+                                </div><br>
+
+                                <div><label for="potato">Potato:</label><input type="number" id="potato" name="potato"
+                                                min="1" max="5">
+                                </div><br>
+
+                                <div><label for="red_cap">Red Cap:</label><input type="number" id="red_cap"
+                                                name="red_cap" min="1" max="5">
+                                </div><br>
+                                <div><label for="blue_cap">Blue Cap:</label><input type="number" id="blue_cap"
+                                                name="blue_cap" min="1" max="5">
+                                </div><br>
+                                <div><label for="green_cap">Green Cap:</label><input type="number" id="green_cap"
+                                                name="green_cap" min="1" max="5"></div><br>
+                                <div><label for="moon_shroom">Moon Shroom:</label><input type="number" id="moon_shroom"
+                                                name="moon_shroom" min="1" max="5"></div><br>
+
+                                <div><label for="pumpkin">Pumpkin:</label><input type="number" id="pumpkin"
+                                                name="pumpkin" min="1" max="5">
+                                </div><br>
+                                <div><label for="toma_root">Toma Root:</label><input type="number" id="toma_root"
+                                                name="toma_root" min="1" max="5"></div><br>
+                                <div><label for="onion">Onion:</label><input type="number" id="onion" name="onion"
+                                                min="1" max="5"></div><br>
+                        </section>
+                        <section>
+                                <h2>Fruits</h2>
+
+                                <div><label for="berries">Berries:</label><input type="number" id="berries"
+                                                name="berries" min="1" max="5">
+                                </div><br>
+
+                                <div><label for="cave_banana">Cave Banana:</label><input type="number" id="cave_banana"
+                                                name="cave_banana" min="1" max="5"></div><br>
+                        </section>
+                        <section>
+                                <h2>Meats/Fishes</h2>
+
+
+                                <div><label for="monster_meat">Monster Meat:</label><input type="number"
+                                                id="monster_meat" name="monster_meat" min="1" max="5"></div><br>
+
+
+                                <div><label for="eel">Eel:</label><input type="number" id="eel" name="eel" min="1"
+                                                max="5"></div><br>
+
+                                <div><label for="drumstick">Drumstick:</label><input type="number" id="drumstick"
+                                                name="drumstick" min="1" max="5"></div><br>
+
+                                <div><label for="fish_meat">Fish Meat:</label><input type="number" id="fish_meat"
+                                                name="fish_meat" min="1" max="5"></div><br>
+                                <div><label for="fish_morsel">Fish Morsel:</label><input type="number" id="fish_morsel"
+                                                name="fish_morsel" min="1" max="5"></div><br>
+
+
+                                <div><label for="frog_legs">Frog Legs:</label><input type="number" id="frog_legs"
+                                                name="frog_legs" min="1" max="5">
+                                </div><br>
+
+                                <div><label for="leafy_meat">Leafy Meat:</label><input type="number" id="leafy_meat"
+                                                name="leafy_meat" min="1" max="5"></div><br>
+
+                                <div><label for="popperfish">Popperfish:</label><input type="number" id="popperfish"
+                                                name="popperfish" min="1" max="5"></div><br>
+                        </section>
+
+                        <section>
+                                <h2>Sweetener</h2>
+
+                                <div><label for="honey">Honey:</label><input type="number" id="honey" name="honey"
+                                                min="1" max="5"></div><br>
+                                <div><label for="royal_jelly">Royal Jelly:</label><input type="number" id="royal_jelly"
+                                                name="royal_jelly" min="1" max="5"></div><br>
+                        </section>
+
+                        <section>
+                                <h2>Other</h2>
+
+                                <div><label for="butterfly_wings">Butterfly Wings:</label><input type="number"
+                                                id="butterfly_wings" name="butterfly_wings" min="1" max="5"></div><br>
+
+
+                                <div><label for="butter">Butter:</label><input type="number" id="butter" name="butter"
+                                                min="1" max="5"></div><br>
+                                <div><label for="mandrake">Mandrake:</label><input type="number" id="mandrake"
+                                                name="mandrake" min="1" max="5">
+                                </div><br>
+
+                                <div><label for="tallbird_egg">Tallbird Egg:</label><input type="number"
+                                                id="tallbird_egg" name="tallbird_egg" min="1" max="5"></div><br>
+
+                                <div><label for="eggs">Eggs:</label><input type="number" id="eggs" name="eggs" min="1"
+                                                max="5"></div><br>
+
+                                <div><label for="naked_nostrils">Naked Nostrils:</label><input type="number"
+                                                id="naked_nostrils" name="naked_nostrils" min="1" max="5"></div><br>
+                                <div><label for="kelp_fronds">Kelp Fronds:</label><input type="number" id="kelp_fronds"
+                                                name="kelp_fronds" min="1" max="5"></div><br>
+
+                                <div><label for="barnacle">Barnacle:</label><input type="number" id="barnacle"
+                                                name="barnacle" min="1" max="5">
+                                </div><br>
+
+
+                        </section>
+
+                        <input type="submit" value="Submit">
+
+                </form>
+        </div>
+
+        <div class="right">
+                <h1>Valid Recipes</h1>
+                <div>
+                        <table id="recipes">
+                                <tr>
+                                        <th>Name</th>
+                                        <th>Priority</th>
+                                        <th>Hunger</th>
+                                        <th>Sanity</th>
+                                        <th>Health</th>
+                                        <th>Expiration</th>
+                                        <th>Ingredients</th>
+                                        <th>Cannot Contain</th>
+                                </tr>
+                                {% for recipe in data %}
+                                <tr>
+                                        <td>{{recipe.name}}</td>
+                                        <td>{{recipe.priority}}</td>
+                                        <td>{{recipe.hunger}}</td>
+                                        <td>{{recipe.sanity}}</td>
+                                        <td>{{recipe.health}}</td>
+                                        <td>{{recipe.expiration}}</td>
+                                        <td>{{recipe.ingredients}}</td>
+                                        <td>{{recipe.no}}</td>
+                                </tr>
+                                {% endfor %}
+                        </table>
+                </div>
+        </div>
+</body>
 </html>

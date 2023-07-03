@@ -51,7 +51,18 @@ def check_recipes(recipes: list, foods: list[Food]):
         viable_recipes.append(recipe)
 
     return viable_recipes
-        
+
+def ingredients_to_recipes(food_names: list):
+    config = setup_config()
+
+    food_list = names_to_objects(food_names, config['food'])
+
+    recipes = config['recipes']
+
+    viable_recipes = check_recipes(recipes, food_list)
+
+    return viable_recipes
+
 
 def main():
     config = setup_config()
@@ -67,5 +78,3 @@ def main():
         print(viable_recipe['name'])
 
     
-
-main()

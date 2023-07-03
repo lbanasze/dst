@@ -84,29 +84,3 @@ def scrape_crockpot(accepted_dlc = ['Don\'t Starve Together', 'DST']):
             recipes.append(recipe)
 
     return recipes
-
-        
-    
-def main():
-    recipes = json.load(open('crockpot_recipes.json'))
-    
-    columns = ["recipe_name", "hunger", "sanity", "health","expiration", "priority", "no" ]
-
-    new_recipes = []
-    for recipe in recipes:
-        new_recipe = {}
-        ingredients = {}
-        for key, value in recipe.items():
-            if key not in columns:
-                ingredients[key] = value
-            else: 
-                new_recipe[key] = value
-        
-        new_recipe['ingredients'] = ingredients
-
-        new_recipes.append(new_recipe)
-
-    print(new_recipes)
-
-
-main()
