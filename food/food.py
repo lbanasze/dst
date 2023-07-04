@@ -32,7 +32,7 @@ def get_quantity(food_list: list[Food], special_ingredient):
 
 def remove_by_quantity(food_list: list[Food], special_ingredient, quantity):
     new_food_list = []
-    while quantity != 0:
+    while quantity > 0:
         for food in food_list:
             if food.get_name() == special_ingredient:
                 quantity -= food.get_value()

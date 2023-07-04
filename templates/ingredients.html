@@ -2,7 +2,18 @@
 <html>
 
 <head>
+        <link href="https://fonts.cdnfonts.com/css/belisa-plumilla-manual" rel="stylesheet">
+                
         <style>
+                @import url('https://fonts.cdnfonts.com/css/belisa-plumilla-manual');
+
+                body {
+                        font-family: 'Belisa plumilla manual', sans-serif;
+                        letter-spacing: 1px;
+                        color: #EFDB84;
+                        background-color: #3c2916;
+                }
+
                 div {
                         display: inline-block;
                 }
@@ -18,7 +29,7 @@
                 .grid-container {
                         display: grid;
                         grid-template-areas:
-                                'left right';
+                                'left left right';
                         gap: 10px;
                 }
 
@@ -28,7 +39,6 @@
                 }
 
                 td, th {
-                  border: 1px solid #ddd;
                   padding: 8px;
                 }
 
@@ -40,8 +50,18 @@
                   padding-top: 12px;
                   padding-bottom: 12px;
                   text-align: left;
-                  background-color: #04AA6D;
-                  color: white;
+                  background-color: #76522c;
+                }
+
+                label {
+                        padding: 12px 12px 12px 0;
+                        display: inline-block;
+                }
+
+                input {
+                        width: 100%;
+                        padding: 12px;
+                        resize: vertical;
                 }
 
         </style>
@@ -50,6 +70,7 @@
 <body class="grid-container">
         <div class="left">
                 <form action="{{ url_for('gather_ingredients') }}" method="post">
+                        <h1>Ingredients</h1>
 
                         <section>
                                 <h2>Vegetables</h2>
@@ -188,7 +209,7 @@
         </div>
 
         <div class="right">
-                <h1>Valid Recipes</h1>
+                <h1>Viable Recipes</h1>
                 <div>
                         <table id="recipes">
                                 <tr>

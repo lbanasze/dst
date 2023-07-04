@@ -196,7 +196,7 @@
         "value": 3.0
     },
     "monster_meat": {
-        "group": "monster_meat",
+        "group": "monster",
         "value": 1.0
     },
     "butter": {

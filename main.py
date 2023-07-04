@@ -27,26 +27,30 @@ def names_to_objects(names: list, food_data: dict):
 def check_recipes(recipes: list, foods: list[Food]):
     viable_recipes = []
     for recipe in recipes:
+        available_foods = copy.deepcopy(foods)
         # Check for special ingredients
         special_ingredients = copy.deepcopy(recipe['special_ingredients'])
         for ingredient, quantity in recipe['special_ingredients'].items():
-            if get_quantity(foods, ingredient) >= quantity:
-                foods = remove_by_quantity(foods, ingredient, quantity)
+            if get_quantity(foods, ingredient.lower()) >= quantity:
+                available_foods = remove_by_quantity(available_foods, ingredient.lower(), quantity)
                 special_ingredients.pop(ingredient)
 
         if len(special_ingredients) != 0:
             continue
 
         # Check for general ingredients
-        basic_foods = tally_basic(foods)
+        basic_foods = tally_basic(available_foods)
         basic_ingredients = copy.deepcopy(recipe['food_group_ingredients'])
         for ingredient, quantity in recipe['food_group_ingredients'].items():
+
+
             if basic_foods[ingredient] >= quantity:
                 basic_ingredients.pop(ingredient)
+            
 
         if len(basic_ingredients) != 0:
             continue
-
+            
 
         viable_recipes.append(recipe)
 
@@ -67,7 +71,7 @@ def ingredients_to_recipes(food_names: list):
 def main():
     config = setup_config()
 
-    food_names = ['meat', 'meat', 'meat']
+    food_names = ['eggplant', 'eggplant', 'onion']
     food_list = names_to_objects(food_names, config['food'])
 
     recipes = config['recipes']
@@ -78,3 +82,4 @@ def main():
         print(viable_recipe['name'])
 
     
+main()

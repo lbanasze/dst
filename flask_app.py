@@ -32,13 +32,14 @@ def gather_ingredients():
         recipe_ingredients = []
 
         for ingredient, quantity in recipe['food_group_ingredients'].items():
-            recipe_ingredients.append(f'{quantity} {ingredient}')
+            recipe_ingredients.append(f'{quantity} {ingredient.title()}')
 
         for ingredient, quantity in recipe['special_ingredients'].items():
-            recipe_ingredients.append(f'{quantity} {ingredient}')
+            recipe_ingredients.append(f'{quantity} {ingredient.title()}')
 
-        new_recipe_data['ingredients'] = ','.join(recipe_ingredients)
-        new_recipe_data['no'] = ','.join(recipe['no'])
+
+        new_recipe_data['ingredients'] = ', '.join(recipe_ingredients)
+        new_recipe_data['no'] = ', '.join([ing.title() for ing in recipe['no']])
 
         recipes_data.append(new_recipe_data)
 
