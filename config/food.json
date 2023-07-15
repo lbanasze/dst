@@ -41,6 +41,7 @@
     },
     "fish_morsel": {
         "group": "fish_meat",
+        
         "value": 0.5
     },
     "raw_fish": {

@@ -22,3 +22,12 @@ def parse_recipe_ingredients(ingredients: dict):
 
 
     return food_group_ingredients, special_ingredients
+
+
+def get_unique_ingredients(recipes: list):
+    ingredients = []
+    for recipe in recipes:
+        for ing in recipe['food_group_ingredients']:
+            ingredients.append(ing)
+
+

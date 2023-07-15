@@ -42,10 +42,6 @@
                   padding: 8px;
                 }
 
-                tr:nth-child(even){background-color: #f2f2f2;}
-
-                tr:hover {background-color: #ddd;}
-
                	th {
                   padding-top: 12px;
                   padding-bottom: 12px;
@@ -72,7 +68,7 @@
                 <form action="{{ url_for('gather_ingredients') }}" method="post">
                         <h1>Ingredients</h1>
 
-                        <section>
+                        <section class="content">
                                 <h2>Vegetables</h2>
 
                                 <div><label for="asparagus">Asparagus:</label><input type="number" id="asparagus"
@@ -135,22 +131,27 @@
                         <section>
                                 <h2>Meats/Fishes</h2>
 
+                                <div><label for="drumstick">Drumstick:</label><input type="number" id="drumstick"
+                                        name="drumstick" min="1" max="5"></div><br>
+
+                                <div><label for="morsel">Morsel:</label><input type="number" id="morsel"
+                                        name="morsel" min="1" max="5"></div><br>
+
+                                <div><label for="meat">Meat:</label><input type="number" id="meat"
+                                        name="meat" min="1" max="5"></div><br>
 
                                 <div><label for="monster_meat">Monster Meat:</label><input type="number"
                                                 id="monster_meat" name="monster_meat" min="1" max="5"></div><br>
 
-
                                 <div><label for="eel">Eel:</label><input type="number" id="eel" name="eel" min="1"
                                                 max="5"></div><br>
 
-                                <div><label for="drumstick">Drumstick:</label><input type="number" id="drumstick"
-                                                name="drumstick" min="1" max="5"></div><br>
-
+      
                                 <div><label for="fish_meat">Fish Meat:</label><input type="number" id="fish_meat"
                                                 name="fish_meat" min="1" max="5"></div><br>
+
                                 <div><label for="fish_morsel">Fish Morsel:</label><input type="number" id="fish_morsel"
                                                 name="fish_morsel" min="1" max="5"></div><br>
-
 
                                 <div><label for="frog_legs">Frog Legs:</label><input type="number" id="frog_legs"
                                                 name="frog_legs" min="1" max="5">
@@ -237,5 +238,8 @@
                         </table>
                 </div>
         </div>
+
+        <script>
+        </script>
 </body>
 </html>

@@ -338,6 +338,26 @@
         "special_ingredients": {}
     },
     {
+        "name": "Flower Salad",
+        "hunger": 12.5,
+        "sanity": 5.0,
+        "health": 40.0,
+        "expiration": "15d",
+        "priority": 0.0,
+        "no": [
+            "egg",
+            "fruit",
+            "meat",
+            "sweetener"
+        ],
+        "food_group_ingredients": {
+            "VEGETABLE": 1.5
+        },
+        "special_ingredients": {
+            "CACTUS_FLOWER": 0.5
+        }
+    },
+    {
         "name": "Froggle Bunwich",
         "hunger": 37.5,
         "sanity": 5.0,
@@ -629,7 +649,7 @@
         "priority": 10.0,
         "no": [],
         "food_group_ingredients": {
-            "SWEETENER": 1
+            "SWEETENER": 2
         },
         "special_ingredients": {
             "PUMPKIN": 1
@@ -781,18 +801,12 @@
         "health": -3.0,
         "expiration": 15.0,
         "no": [
-            "meat",
-            "egg",
-            "inedible"
+            "meat"
         ],
         "food_group_ingredients": {
-            "VEGETABLE": 1
+            "SWEETENER": 3
         },
-        "special_ingredients": {
-            "ASPARAGUSES": 1,
-            "TOMA_ROOTS": 1,
-            "ICE": 1
-        }
+        "special_ingredients": {}
     },
     {
         "name": "Waffles",
