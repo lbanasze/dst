@@ -1,7 +1,3 @@
-# dst
+# Don't Starve Together 
 
-
-## Files
-
-## Required Libraries
-- bs4
+Flask app to help with choosing a recipe given a set of ingredients
