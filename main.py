@@ -1,4 +1,4 @@
-from food.food import get_quantity, remove_by_quantity, tally_basic, Food
+from food import get_quantity, remove_by_quantity, tally_basic, Food
 import copy
 import json
 import os
