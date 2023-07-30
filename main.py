@@ -66,20 +66,3 @@ def ingredients_to_recipes(food_names: list):
     viable_recipes = check_recipes(recipes, food_list)
 
     return viable_recipes
-
-
-def main():
-    config = setup_config()
-
-    food_names = ['eggplant', 'eggplant', 'onion']
-    food_list = names_to_objects(food_names, config['food'])
-
-    recipes = config['recipes']
-
-    viable_recipes = check_recipes(recipes, food_list)
-
-    for viable_recipe in viable_recipes:
-        print(viable_recipe['name'])
-
-    
-main()

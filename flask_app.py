@@ -5,7 +5,11 @@ app = Flask(__name__)
  
 @app.route('/')
 def index():
-    return render_template('ingredients.html', data=[])
+    return render_template('calculator-v1.html', data=[])
+
+@app.route('/v2')
+def v2():
+    return render_template('calculator-v2.html')
 
 @app.route('/gather_ingredients', methods=['POST'])
 def gather_ingredients():
@@ -43,7 +47,7 @@ def gather_ingredients():
 
         recipes_data.append(new_recipe_data)
 
-    return render_template('ingredients.html', data=recipes_data)
+    return render_template('calculator-v1.html', data=recipes_data)
  
 # main driver function
 if __name__ == '__main__':

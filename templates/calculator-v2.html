@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.cdnfonts.com/css/belisa-plumilla-manual" rel="stylesheet">
+                
+        <style>
+                @import url('https://fonts.cdnfonts.com/css/belisa-plumilla-manual');
+
+                body {
+                        font-family: 'Belisa plumilla manual', sans-serif;
+                        letter-spacing: 1px;
+                        color: #EFDB84;
+                        background-color: #3c2916;
+                }
+        </style>
+    </head>
+
+    <body>
+        <form action="#" id="addIngredient">
+            <h2>Add Ingredient</h2>
+            <input type="text" placeholder="Ingredient" id="name">
+            <input type="number" placeholder="1" id="quantity" min="1">
+            <button type="submit" id="submit">+</button>
+            <button type="submit" id="clear">Clear</button>
+
+        </form>
+
+        <table id="ingredients"></table>
+
+    </body>
+
+    <script>
+        let form=document.getElementById("addIngredient")
+        let table=document.getElementById("ingredients");
+        
+        form.addEventListener("submit",(e)=>{
+            buttonId = e.submitter.id;
+            if (buttonId == "submit") {
+                e.preventDefault();
+                submit();
+            }
+            else if (buttonId == "clear") {
+                e.preventDefault()
+                clear();
+            }
+        })
+
+        function handleIncrease(e) {
+            // Get the row that the buttons are in
+            var row = e.target.parentElement.parentElement.parentElement;
+            var quantityCell = row.querySelector('#quantityCell')
+            quantityCell.innerText = Number(quantityCell.innerText) + 1
+            
+        }
+
+        function handleDecrease(e) {
+            var row = e.target.parentElement.parentElement.parentElement;
+            var quantityCell = row.querySelector('#quantityCell')
+            quantityCell.innerText = Number(quantityCell.innerText) - 1
+
+            if (quantityCell.innerText == 0) {
+                row.remove()
+            }
+        }
+
+        const submit=()=>{
+            let ingredient = document.getElementById("name").value;
+            let quantity = document.getElementById("quantity").value;
+
+            var li = document.createElement("li");
+            var quantityText = document.createTextNode(quantity)
+            var ingredientText = document.createElement("div")
+            ingredientText.innerText = ingredient
+
+            var buttonIncrease = document.createElement("button");
+            buttonIncrease.innerText = '+';
+            buttonIncrease.addEventListener('click', handleIncrease);
+
+            var buttonDecrease = document.createElement("button");
+            buttonDecrease.innerText = '-';
+            buttonDecrease.addEventListener('click', handleDecrease);
+            var buttonDiv = document.createElement('div');
+            buttonDiv.appendChild(buttonIncrease);
+            buttonDiv.appendChild(buttonDecrease);
+
+            var tableRow = document.createElement('tr');
+
+            var buttonCell = document.createElement('td');
+            buttonCell.id = 'buttonCell';
+            buttonCell.appendChild(buttonDiv)
+
+            var quantityCell = document.createElement('td');
+            quantityCell.id = 'quantityCell'
+            quantityCell.appendChild(quantityText);
+
+            var nameCell = document.createElement('td');
+            nameCell.id = 'nameCell'
+            nameCell.appendChild(ingredientText);
+
+            tableRow.appendChild(buttonCell);
+            tableRow.appendChild(quantityCell);
+            tableRow.appendChild(nameCell);
+
+            table.appendChild(tableRow);
+
+            form.reset();
+        }
+
+        const clear=()=>{
+            table.innerHTML = "";
+
+            form.reset();
+        }
+
+    </script>
+</html>
