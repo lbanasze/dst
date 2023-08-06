@@ -2,23 +2,18 @@
 <html>
     <head>
         <link href="https://fonts.cdnfonts.com/css/belisa-plumilla-manual" rel="stylesheet">
-                
-        <style>
-                @import url('https://fonts.cdnfonts.com/css/belisa-plumilla-manual');
-
-                body {
-                        font-family: 'Belisa plumilla manual', sans-serif;
-                        letter-spacing: 1px;
-                        color: #EFDB84;
-                        background-color: #3c2916;
-                }
-        </style>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
 
     <body>
         <form action="#" id="addIngredient">
             <h2>Add Ingredient</h2>
-            <input type="text" placeholder="Ingredient" id="name">
+            <select name="name" id="name">
+                {% for item in options %}
+                    <option value={{item.id}}>{{item.display}}</option>
+                {% endfor %}
+            </select>
+            
             <input type="number" placeholder="1" id="quantity" min="1">
             <button type="submit" id="submit">+</button>
             <button type="submit" id="clear">Clear</button>
@@ -33,6 +28,7 @@
         let form=document.getElementById("addIngredient")
         let table=document.getElementById("ingredients");
         
+        // Event listeners for submit and clear buttons
         form.addEventListener("submit",(e)=>{
             buttonId = e.submitter.id;
             if (buttonId == "submit") {
@@ -45,6 +41,7 @@
             }
         })
 
+        // Logic for + button
         function handleIncrease(e) {
             // Get the row that the buttons are in
             var row = e.target.parentElement.parentElement.parentElement;
@@ -53,20 +50,33 @@
             
         }
 
+        // Logic for - button
         function handleDecrease(e) {
             var row = e.target.parentElement.parentElement.parentElement;
             var quantityCell = row.querySelector('#quantityCell')
             quantityCell.innerText = Number(quantityCell.innerText) - 1
 
-            if (quantityCell.innerText == 0) {
+            if (quantityCell.innerText <= 0) {
                 row.remove()
             }
         }
 
+        // Retrieve the list of ingredients
+        function getIngredients(){
+            for (let row of table.rows) 
+            {
+                quantity = row.cells[1].innerText;
+                name = row.cells[2].innerText;
+            }
+        }
+
+
+        // Submit button logic 
         const submit=()=>{
             let ingredient = document.getElementById("name").value;
             let quantity = document.getElementById("quantity").value;
 
+            // Create a list element with a +/- button, quantity, and name
             var li = document.createElement("li");
             var quantityText = document.createTextNode(quantity)
             var ingredientText = document.createElement("div")
@@ -102,6 +112,8 @@
             tableRow.appendChild(nameCell);
 
             table.appendChild(tableRow);
+
+            getIngredients();
 
             form.reset();
         }

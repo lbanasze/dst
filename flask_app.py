@@ -1,15 +1,28 @@
 from flask import Flask, render_template, request
-from main import ingredients_to_recipes
+from main import ingredients_to_recipes, setup_config
  
 app = Flask(__name__)
  
-@app.route('/')
+@app.route('/v1')
 def index():
     return render_template('calculator-v1.html', data=[])
 
-@app.route('/v2')
+@app.route('/')
 def v2():
-    return render_template('calculator-v2.html')
+    config = setup_config()
+    food = config['food']
+    food_options = []
+    for key, value in food.items():
+        name = ' '.join(key.split('_')).title()
+        new_food = {
+            'id': key,
+            'display': name,
+            'group': value['group'],
+            'value': value['value']
+        }
+        food_options.append(new_food)
+
+    return render_template('calculator-v2.html', options=food_options)
 
 @app.route('/gather_ingredients', methods=['POST'])
 def gather_ingredients():
